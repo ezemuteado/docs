@@ -1,0 +1,261 @@
+---
+title: "Explorar los resultados del análisis"
+description: "Guía para navegar la interfaz de análisis de Dialecto: reproductor de video, transcripción, pestañas de análisis y asistente de IA."
+icon: "chart-mixed"
+---
+
+## Vista general de un discurso
+
+Al hacer clic en un discurso procesado desde la barra lateral, accederá a la vista de detalle. Esta pantalla está organizada en tres secciones principales:
+
+<Frame>
+  <img src="/images/dialecto/speech-detail-overview.png" alt="Vista general del detalle de un discurso con las tres secciones principales" />
+</Frame>
+
+| Sección | Ubicación | Descripción |
+|---------|-----------|-------------|
+| **Reproductor de video** | Izquierda (superior) | Reproductor con controles de reproducción y generación de clips |
+| **Transcripción** | Derecha (superior) | Panel con la transcripción completa sincronizada con el video |
+| **Análisis** | Inferior | Pestañas con los diferentes tipos de análisis disponibles |
+
+---
+
+## Reproductor de video
+
+El reproductor le permite ver el discurso con controles estándar de reproducción. Si el video fue procesado para streaming, se reproducirá en formato HLS de alta calidad.
+
+<Frame>
+  <img src="/images/dialecto/video-player.png" alt="Reproductor de video con controles de reproducción" />
+</Frame>
+
+### Controles disponibles
+
+- **Play / Pausa** — Inicie o detenga la reproducción
+- **Barra de progreso** — Navegue a cualquier momento del discurso
+- **Duración** — Indicador del tiempo total en la esquina inferior derecha
+
+<Tip>
+  Al hacer clic en una frase clave o un segmento de la transcripción, el reproductor saltará automáticamente a ese momento del video.
+</Tip>
+
+---
+
+## Panel de transcripción
+
+A la derecha del reproductor, encontrará el panel de **"Transcripción"** con el texto completo del discurso segmentado.
+
+<Frame>
+  <img src="/images/dialecto/transcript-panel.png" alt="Panel de transcripción con segmentos y marcas de tiempo" />
+</Frame>
+
+### Características del panel
+
+Cada segmento de la transcripción muestra:
+- **Marca de tiempo** — El momento exacto en el que fue dicho (fuente monoespaciada)
+- **Nombre del orador** — Si se identificaron múltiples oradores
+- **Texto transcrito** — El contenido del segmento
+
+### Sincronización con el video
+
+El panel se sincroniza automáticamente con la reproducción del video:
+- El **segmento activo** se resalta con un borde lateral de color y fondo destacado
+- Los **segmentos anteriores** se muestran con opacidad reducida
+- El panel realiza **auto-scroll** para seguir la reproducción
+
+<Frame>
+  <img src="/images/dialecto/transcript-active-segment.png" alt="Segmento activo de la transcripción resaltado durante la reproducción" />
+</Frame>
+
+Si usted desplaza manualmente el panel durante la reproducción, el auto-scroll se pausará y aparecerá un banner con el botón **"Reanudar"** para volver a activarlo.
+
+### Crear clip desde la transcripción
+
+Haga clic derecho sobre cualquier segmento para acceder a la opción **"Crear clip"**, que le permitirá generar un clip de video a partir de ese momento.
+
+---
+
+## Resumen de IA y visión general
+
+Debajo del reproductor y la transcripción, encontrará dos secciones de resumen generadas por inteligencia artificial.
+
+### Resumen ejecutivo
+
+Un párrafo generado por IA que sintetiza el contenido, el tono y los puntos principales del discurso.
+
+<Frame>
+  <img src="/images/dialecto/ai-summary.png" alt="Resumen ejecutivo generado por IA" />
+</Frame>
+
+### Visión general
+
+Panel con seis métricas clave que ofrecen una lectura rápida del discurso:
+
+<Frame>
+  <img src="/images/dialecto/vision-general.png" alt="Panel de visión general con las seis métricas del discurso" />
+</Frame>
+
+| Métrica | Descripción |
+|---------|-------------|
+| **Emoción** | Nivel de carga emocional en el discurso |
+| **Datos concretos** | Proporción de afirmaciones basadas en datos verificables |
+| **Claridad** | Qué tan comprensible es el lenguaje utilizado |
+| **Positividad** | Predominio de tono positivo vs. negativo |
+| **Agresión** | Nivel de confrontación o ataque en el discurso |
+| **Repetición** | Frecuencia de ideas o frases reiteradas |
+
+Cada métrica muestra un porcentaje de 0% a 100% con una barra de progreso de color.
+
+---
+
+## Pregúntale a la IA
+
+Debajo del resumen, encontrará la sección **"Pregúntale a la IA"**, donde usted puede hacer preguntas en lenguaje natural sobre el contenido del discurso.
+
+<Frame>
+  <img src="/images/dialecto/ask-ai.png" alt="Sección de preguntas a la IA con sugerencias" />
+</Frame>
+
+El sistema ofrece **preguntas sugeridas** como punto de partida. Usted también puede escribir su propia pregunta. La IA responderá basándose exclusivamente en la transcripción y el análisis del discurso.
+
+---
+
+## Análisis de sentimiento
+
+La sección de sentimiento muestra una visualización del tono emocional a lo largo del discurso.
+
+<Frame>
+  <img src="/images/dialecto/sentiment-overview.png" alt="Visualización de sentimiento con distribución por categorías" />
+</Frame>
+
+Las cinco categorías evaluadas son:
+
+| Categoría | Color | Descripción |
+|-----------|-------|-------------|
+| **Positivo** | Verde | Declaraciones optimistas o constructivas |
+| **Negativo** | Rojo | Declaraciones críticas o pesimistas |
+| **Neutro** | Gris | Declaraciones informativas sin carga emocional |
+| **Agresivo** | Naranja | Declaraciones confrontativas o de ataque |
+| **Conciliador** | Azul | Declaraciones de acuerdo o búsqueda de consenso |
+
+---
+
+## Pestañas de análisis
+
+La sección inferior presenta nueve pestañas de análisis profundo. Usted puede hacer clic en cada pestaña para explorar esa dimensión del discurso.
+
+<Frame>
+  <img src="/images/dialecto/analysis-tabs.png" alt="Barra de pestañas de análisis con las nueve opciones" />
+</Frame>
+
+<AccordionGroup>
+  <Accordion title="Estructura" icon="chart-bar">
+    Descomposición del discurso en secciones temáticas. Cada sección muestra su duración y el porcentaje del tiempo total que ocupa.
+
+    <Frame>
+      <img src="/images/dialecto/tab-structure.png" alt="Pestaña de estructura mostrando secciones del discurso" />
+    </Frame>
+
+    Útil para entender cómo el orador organizó su mensaje y a qué temas dedicó más tiempo.
+  </Accordion>
+
+  <Accordion title="Relaciones" icon="diagram-project">
+    Mapa visual de entidades (personas, organizaciones, lugares, conceptos) y las conexiones entre ellas.
+
+    <Frame>
+      <img src="/images/dialecto/tab-relations.png" alt="Mapa de relaciones entre entidades mencionadas en el discurso" />
+    </Frame>
+
+    Cada entidad se clasifica por tipo y muestra la cantidad de menciones. Las líneas entre entidades representan relaciones identificadas.
+  </Accordion>
+
+  <Accordion title="Palabras" icon="font">
+    Análisis de frecuencia de palabras y frases repetidas a lo largo del discurso.
+
+    <Frame>
+      <img src="/images/dialecto/tab-words.png" alt="Frecuencia de palabras y frases más utilizadas" />
+    </Frame>
+
+    Le permite identificar el vocabulario predominante y los mensajes centrales del orador.
+  </Accordion>
+
+  <Accordion title="Frases clave" icon="quote-left">
+    Listado de las declaraciones más relevantes del discurso con sus marcas de tiempo.
+
+    <Frame>
+      <img src="/images/dialecto/tab-phrases.png" alt="Lista de frases clave con marcas de tiempo" />
+    </Frame>
+
+    Haga clic en cualquier frase para que el reproductor salte directamente a ese momento del video.
+  </Accordion>
+
+  <Accordion title="Reacción medios" icon="newspaper">
+    Seguimiento de cómo los principales medios de comunicación reaccionaron al discurso.
+
+    <Frame>
+      <img src="/images/dialecto/tab-media.png" alt="Reacciones de medios de comunicación al discurso" />
+    </Frame>
+
+    <Note>
+      Este análisis se ejecuta de forma asincrónica y puede requerir unos minutos adicionales tras completarse el análisis principal.
+    </Note>
+  </Accordion>
+
+  <Accordion title="Redes sociales" icon="hashtag">
+    Monitoreo de la conversación en X (Twitter) generada a partir del discurso.
+
+    <Frame>
+      <img src="/images/dialecto/tab-rrss.png" alt="Reacciones en redes sociales con menciones y sentimiento" />
+    </Frame>
+
+    Incluye volumen de menciones, sentimiento predominante y las publicaciones más relevantes.
+  </Accordion>
+
+  <Accordion title="Fact-check" icon="shield-check">
+    Verificación automatizada de las afirmaciones realizadas durante el discurso.
+
+    <Frame>
+      <img src="/images/dialecto/tab-factcheck.png" alt="Resultados del fact-check con veredictos por afirmación" />
+    </Frame>
+
+    Cada afirmación verificada incluye:
+    - La **cita textual** del orador
+    - El **veredicto**: verdadero, falso, parcialmente verdadero o sin verificar
+    - La **justificación** detallada
+    - Las **fuentes** utilizadas para la verificación
+  </Accordion>
+
+  <Accordion title="Sentimiento" icon="heart">
+    Desglose detallado del sentimiento a lo largo del discurso con visualización en línea de tiempo.
+
+    <Frame>
+      <img src="/images/dialecto/tab-sentiment.png" alt="Línea de tiempo de sentimiento del discurso" />
+    </Frame>
+
+    Muestra cómo el tono del orador evoluciona a lo largo de los distintos segmentos del discurso.
+  </Accordion>
+
+  <Accordion title="Análisis técnico" icon="bolt">
+    Métricas técnicas que evalúan la calidad comunicacional del discurso.
+
+    <Frame>
+      <img src="/images/dialecto/tab-technical.png" alt="Métricas técnicas del discurso" />
+    </Frame>
+
+    | Métrica | Descripción |
+    |---------|-------------|
+    | **Claridad** | Qué tan comprensible es el lenguaje |
+    | **Complejidad** | Sofisticación del vocabulario y las oraciones |
+    | **Retórica** | Uso de figuras retóricas y técnicas persuasivas |
+    | **Nivel de lectura** | Puntaje Flesch de legibilidad |
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Siguiente paso
+
+Ahora que conoce cómo explorar los resultados, aprenda a generar clips y exportar reportes.
+
+<Card title="Crear clips y exportar reportes" icon="scissors" href="/products/dialecto/clips-and-export">
+  Aprenda a generar clips de video compartibles y a exportar el análisis completo en PDF, JSON o CSV.
+</Card>

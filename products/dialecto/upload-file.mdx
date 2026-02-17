@@ -1,0 +1,296 @@
+---
+title: "Subir y analizar un archivo"
+description: "Guía paso a paso para subir un archivo de video o audio a Dialecto y lanzar el análisis automático."
+icon: "upload"
+---
+
+## Antes de comenzar
+
+Antes de iniciar el proceso, asegúrese de contar con lo siguiente:
+
+<Check>Un archivo de video o audio en formato **MP4, MP3, WAV o WebM**</Check>
+<Check>Duración máxima del archivo: **2 horas y 30 minutos**</Check>
+<Check>Acceso a su cuenta de Operantio con Dialecto habilitado</Check>
+
+---
+
+## Paso 1 — Acceder a Dialecto
+
+Inicie sesión en su [consola de Operantio](https://app.operantio.com) y seleccione **Dialecto** desde la página de inicio o desde la barra de navegación superior.
+
+<Frame>
+  <img
+    src="/images/dialecto/select-dialecto.png"
+    alt="Selección de Dialecto desde la página de inicio o la barra de navegación"
+  />
+</Frame>
+
+Una vez dentro, verá la barra lateral con el listado de discursos existentes y el botón para agregar uno nuevo.
+
+---
+
+## Paso 2 — Iniciar el asistente
+
+Haga clic en el botón **"+"** ubicado en la parte superior de la barra lateral. Se abrirá el asistente de carga organizado en 3 pasos.
+
+<Frame>
+  <img
+    src="/images/dialecto/add-button.png"
+    alt="Botón Agregar discurso en la barra lateral"
+  />
+</Frame>
+
+El asistente muestra un indicador de progreso con los siguientes pasos:
+
+1. **Fuente** — Seleccione el origen del discurso
+2. **Recorte** — Configure el rango de análisis
+3. **Información** — Complete los metadatos del discurso
+
+---
+
+## Paso 3 — Seleccionar la fuente (Paso 1 de 3)
+
+En la primera pantalla del asistente, verá la sección **"Tipo de fuente"** con dos opciones:
+
+- **Link** — Para ingresar una URL de YouTube o un enlace directo
+- **Archivo** — Para subir un archivo desde su dispositivo
+
+Seleccione **"Archivo"**.
+
+<Frame>
+  <img
+    src="/images/dialecto/source-selection.png"
+    alt="Selección de tipo de fuente con opción Archivo resaltada"
+  />
+</Frame>
+
+### Cargar el archivo
+
+Al seleccionar la opción de archivo, aparecerá una zona de carga donde usted puede:
+
+- **Arrastrar y soltar** el archivo directamente sobre el área indicada
+- **Hacer clic** en la zona para abrir el explorador de archivos de su dispositivo
+
+<Frame>
+  <img
+    src="/images/dialecto/file-dropzone.png"
+    alt="Zona de arrastre para subir archivo"
+  />
+</Frame>
+
+Una vez seleccionado el archivo, el sistema mostrará:
+
+- El **nombre del archivo** seleccionado
+- El **tamaño** del archivo (en MB o GB)
+- La opción **"Click para cambiar"** si desea seleccionar otro archivo
+
+<Frame>
+  <img
+    src="/images/dialecto/file-selected.png"
+    alt="Archivo seleccionado mostrando nombre y tamaño"
+  />
+</Frame>
+
+<Warning>
+  Si el archivo excede la duración máxima de 2 horas y 30 minutos, verá el
+  mensaje de error: *"El archivo excede la duración máxima permitida de 2 horas
+  y 30 minutos"*. Deberá seleccionar un archivo más corto o recortar el video
+  antes de subirlo.
+</Warning>
+
+Haga clic en **"Siguiente"** para avanzar al paso 2.
+
+---
+
+## Paso 4 — Configurar el recorte (Paso 2 de 3)
+
+En este paso, usted puede decidir si desea analizar el video completo o solo un fragmento específico.
+
+<Frame>
+  <img
+    src="/images/dialecto/trim-step.png"
+    alt="Paso de recorte con toggle de video completo"
+  />
+</Frame>
+
+### Analizar el video completo
+
+Por defecto, la opción **"Analizar video completo"** está activada. Si desea analizar todo el archivo tal como fue subido, simplemente haga clic en **"Siguiente"** para continuar.
+
+### Definir un rango específico
+
+Si desea analizar solo una porción del video:
+
+1. Desactive el interruptor **"Analizar video completo"**
+2. Ingrese el tiempo de **Inicio** en formato `HH:MM:SS`
+3. Ingrese el tiempo de **Fin** en formato `HH:MM:SS`
+
+<Frame>
+  <img
+    src="/images/dialecto/trim-range.png"
+    alt="Campos de inicio y fin para recorte del video"
+  />
+</Frame>
+
+<Note>
+  El tiempo de inicio debe ser menor al tiempo de fin. Ambos campos deben tener
+  el formato `HH:MM:SS` válido (por ejemplo: `00:05:30` para 5 minutos y 30
+  segundos).
+</Note>
+
+Haga clic en **"Siguiente"** para avanzar al paso final.
+
+---
+
+## Paso 5 — Completar la información (Paso 3 de 3)
+
+Este es el paso más importante. Aquí debe completar los metadatos que permitirán identificar y contextualizar el discurso.
+
+<Frame>
+  <img
+    src="/images/dialecto/info-step.png"
+    alt="Formulario de información del discurso"
+  />
+</Frame>
+
+### Título del discurso \*
+
+Ingrese un título descriptivo para el discurso. Este título será el que aparezca en la barra lateral y en los reportes de análisis.
+
+**Ejemplo:** _"Discurso de apertura de sesiones ordinarias"_
+
+### Seleccionar orador \*
+
+Usted tiene dos opciones para asignar el orador:
+
+<Tabs>
+  <Tab title="Buscar orador existente">
+    Escriba el nombre del orador en el campo de búsqueda. El sistema mostrará sugerencias con los oradores registrados previamente.
+
+    <Frame>
+      <img src="/images/dialecto/speaker-search.png" alt="Búsqueda de orador con sugerencias desplegadas" />
+    </Frame>
+
+    Cada sugerencia muestra:
+    - Foto o iniciales del orador
+    - Nombre completo
+    - Cargo y provincia
+
+    Haga clic en el orador correspondiente para seleccionarlo.
+
+  </Tab>
+  <Tab title="Crear nuevo orador">
+    Si el orador no existe en el sistema, haga clic en **"Crear nuevo orador"** al final de la lista de sugerencias.
+
+    <Frame>
+      <img src="/images/dialecto/speaker-create.png" alt="Formulario para crear nuevo orador" />
+    </Frame>
+
+    Complete los siguientes campos:
+
+    | Campo | Requerido | Ejemplo |
+    |-------|-----------|---------|
+    | **Nombre** | Sí | Javier |
+    | **Apellido** | Sí | Milei |
+    | **Cargo / Rol** | No | Presidente |
+    | **Provincia** | No | CABA |
+    | **URL del avatar** | No | https://ejemplo.com/foto.jpg |
+
+    Haga clic en **"Confirmar"** para registrar el orador.
+
+  </Tab>
+</Tabs>
+
+### Contexto \*
+
+Escriba una descripción del contexto en el que se pronunció el discurso. Este campo es fundamental para que el análisis de IA tenga mayor precisión.
+
+<Frame>
+  <img
+    src="/images/dialecto/context-field.png"
+    alt="Campo de contexto con contador de caracteres"
+  />
+</Frame>
+
+**Requisito mínimo:** 100 caracteres. El contador en la esquina inferior derecha le indicará su progreso.
+
+**Ejemplo:** _"Discurso pronunciado durante la sesión extraordinaria convocada por el conflicto docente en la provincia de Buenos Aires, donde se discutieron medidas de ajuste presupuestario..."_
+
+<Tip>
+  Mientras más detallado sea el contexto que usted proporcione, más preciso será
+  el análisis de sentimiento, el fact-checking y las reacciones que Dialecto
+  generará.
+</Tip>
+
+---
+
+## Paso 6 — Confirmar y subir
+
+Una vez completados todos los campos requeridos, haga clic en **"Agregar discurso"** para iniciar la subida y el procesamiento.
+
+<Frame>
+  <img
+    src="/images/dialecto/submit-button.png"
+    alt="Botón Agregar discurso habilitado"
+  />
+</Frame>
+
+### Progreso de subida
+
+Si seleccionó la opción de archivo, verá una pantalla de progreso que muestra:
+
+- El **porcentaje de subida** en un indicador circular
+- El **tamaño del archivo** que se está transfiriendo
+- El **tiempo estimado restante**
+
+<Frame>
+  <img
+    src="/images/dialecto/upload-progress.png"
+    alt="Indicador de progreso de subida del archivo"
+  />
+</Frame>
+
+<Note>
+  No cierre el navegador ni cambie de pestaña durante la subida del archivo. El
+  proceso se interrumpirá si la conexión se pierde.
+</Note>
+
+---
+
+## Paso 7 — Esperar el procesamiento
+
+Una vez completada la subida, Dialecto procesará el archivo automáticamente a través de su pipeline de análisis. El proceso incluye:
+
+1. **Procesamiento de video** — Generación de miniatura, conversión de audio y preparación para streaming
+2. **Transcripción** — Transcripción automática con marcas de tiempo
+3. **Análisis** — 12 tipos de análisis ejecutándose en paralelo
+
+<Frame>
+  <img
+    src="/images/dialecto/processing-status.png"
+    alt="Estado de procesamiento del discurso"
+  />
+</Frame>
+
+El discurso aparecerá en su barra lateral con un indicador de estado. Usted puede continuar navegando la plataforma mientras el procesamiento se completa.
+
+<Info>
+  El tiempo de procesamiento varía según la duración del archivo. Un discurso de
+  30 minutos se procesa típicamente en 3 a 5 minutos. Archivos más largos pueden
+  demorar proporcionalmente más.
+</Info>
+
+---
+
+## Siguiente paso
+
+Una vez finalizado el procesamiento, usted puede explorar todos los resultados del análisis.
+
+<Card
+  title="Explorar los resultados del análisis"
+  icon="chart-mixed"
+  href="/products/dialecto/explore-analysis"
+>
+  Aprenda a navegar las pestañas de análisis, interpretar los resultados y
+  aprovechar al máximo cada dimensión del análisis de Dialecto.
+</Card>

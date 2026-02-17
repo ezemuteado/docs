@@ -1,0 +1,154 @@
+---
+title: "Facturación y precios"
+description: "Conozca el modelo de pago por uso de Operantio, las tarifas vigentes de cada producto, el procesamiento seguro de pagos y la gestión de facturas."
+icon: "credit-card"
+---
+
+## Modelo de pago por uso
+
+Operantio opera bajo un modelo de **pago por uso** (*pay-as-you-go*). Usted solo paga por los recursos que efectivamente consume en cada producto. No existen contratos de permanencia ni tarifas fijas obligatorias.
+
+### ¿Cómo funciona?
+
+<Steps>
+  <Step title="Active los productos que necesite">
+    Desde su consola de Operantio, usted puede activar cualquier producto disponible. La activación es inmediata y no genera cargos hasta que comience a utilizar el servicio.
+  </Step>
+  <Step title="Utilice los servicios">
+    Cada producto registra su consumo según métricas específicas: discursos analizados, horas de sala alquiladas, documentos procesados, etc.
+  </Step>
+  <Step title="Reciba su factura mensual">
+    Al cierre de cada período de facturación, se genera una factura detallada con el desglose de consumo por producto y concepto.
+  </Step>
+  <Step title="Pago automático">
+    El monto se cobra automáticamente a la tarjeta de crédito o débito registrada en su cuenta.
+  </Step>
+</Steps>
+
+### Modelos de facturación por concepto
+
+Dependiendo del producto y del recurso consumido, los cargos se calculan bajo uno de estos modelos:
+
+| Modelo | Descripción | Ejemplo |
+|--------|-------------|---------|
+| **Tarifa plana** | Costo fijo mensual por el recurso | Monitor de Sentimiento: USD $45/mes |
+| **Por unidad** | Costo proporcional a la cantidad consumida | Análisis de Narrativa: USD $0.12/documento |
+| **Incluido + excedente** | Cantidad incluida sin costo adicional; se cobra por lo que exceda | Primeros 500 documentos/mes incluidos, luego USD $0.12 c/u |
+
+---
+
+## Pagos con tarjeta
+
+Operantio acepta tarjetas de **crédito y débito** de las principales redes (Visa, Mastercard, American Express).
+
+### Registro de su método de pago
+
+Durante el proceso de activación de su cuenta, se le solicitará ingresar los siguientes datos:
+
+| Campo | Descripción |
+|-------|-------------|
+| **Nombre del titular** | Nombre completo tal como aparece en la tarjeta |
+| **Número de tarjeta** | Los 16 dígitos de la tarjeta |
+| **Vencimiento** | Fecha de expiración (MM/AA) |
+| **CVC** | Código de seguridad de 3 o 4 dígitos ubicado en el reverso de la tarjeta |
+
+### Seguridad en el procesamiento de pagos
+
+<Info>
+  Todos los pagos en Operantio se procesan con **encriptación de 256-bit** (AES-256), el mismo estándar utilizado por instituciones financieras a nivel mundial.
+</Info>
+
+Nuestro sistema de pagos cumple con los más altos estándares de seguridad de la industria:
+
+<Columns cols={2}>
+  <Card title="Encriptación AES-256" icon="lock">
+    Toda la información de su tarjeta se transmite y almacena utilizando encriptación de 256 bits. Sus datos nunca viajan en texto plano.
+  </Card>
+  <Card title="Cumplimiento PCI DSS" icon="shield-check">
+    Nuestro procesador de pagos cumple con el estándar PCI DSS (Payment Card Industry Data Security Standard), el marco regulatorio más exigente para el manejo de datos de tarjetas.
+  </Card>
+  <Card title="Datos tokenizados" icon="key">
+    Los números de tarjeta se tokenizan inmediatamente al ser ingresados. Operantio nunca almacena los datos completos de su tarjeta en sus servidores.
+  </Card>
+  <Card title="Monitoreo de fraude" icon="eye">
+    Cada transacción pasa por sistemas de detección de fraude en tiempo real que protegen su cuenta ante actividades sospechosas.
+  </Card>
+</Columns>
+
+---
+
+## Facturas
+
+### Consultar su historial de facturas
+
+Desde su consola de Operantio, acceda a la sección **"Facturación"** para consultar el historial completo de facturas.
+
+Cada factura incluye:
+- **Período** de facturación (mes y año)
+- **Desglose por producto** con cada concepto, cantidad, precio unitario y total
+- **Monto total** en USD
+- **Fecha de emisión** y **fecha de vencimiento**
+
+### Estados de una factura
+
+| Estado | Descripción |
+|--------|-------------|
+| **Pendiente** | La factura fue emitida y aún no ha sido cobrada |
+| **Pagado** | El pago se procesó correctamente |
+| **Vencido** | La factura superó su fecha de vencimiento sin haber sido cobrada |
+| **Anulado** | La factura fue cancelada y no generará cobros |
+
+### Exportar facturas
+
+Usted puede exportar el desglose de facturación en formato **CSV** para procesarlo en hojas de cálculo. El archivo incluye las columnas: Producto, Concepto, Cantidad, Unidad, Precio unitario y Total.
+
+---
+
+## Panel de facturación
+
+El panel de facturación en su consola le ofrece visibilidad completa sobre sus costos:
+
+- **Costo total del período** — Monto acumulado del mes en curso, con comparación respecto al mes anterior
+- **Tendencia mensual** — Gráfico de evolución de costos mes a mes
+- **Desglose por servicio** — Detalle de cada producto activo con sus conceptos y costos individuales
+- **Selector de período** — Consulte la facturación de cualquier mes anterior
+
+---
+
+## Desactivación de servicios
+
+Si usted desea dejar de utilizar un producto:
+
+1. Acceda a la sección **"Facturación"** en su consola
+2. En el desglose por servicio, haga clic en **"Desactivar servicio"** junto al producto
+3. Confirme la desactivación
+
+<Warning>
+  La desactivación se programa para el **final del período de facturación actual**. El servicio continuará activo hasta esa fecha y no se generarán cargos adicionales en el siguiente período.
+</Warning>
+
+Si cambia de opinión antes del cierre del período, usted puede cancelar la desactivación y el servicio continuará operando normalmente.
+
+---
+
+## Facturas vencidas y suspensión
+
+Si una factura no es cobrada en su fecha de vencimiento, se aplica un **período de gracia de 15 días**.
+
+- Durante los primeros días, verá un banner de advertencia indicando el monto adeudado y los días restantes antes de la suspensión.
+- Si transcurren los 15 días sin que se regularice el pago, su organización podrá ser **suspendida**, lo que impedirá el acceso a los servicios hasta que se complete el pago.
+
+<Tip>
+  Para evitar interrupciones, asegúrese de que la tarjeta registrada en su cuenta se encuentre vigente y con fondos disponibles.
+</Tip>
+
+---
+
+<Columns cols={2}>
+  <Card title="Tabla de precios" icon="tag" href="/products/billing/pricing">
+    Consulte las tarifas vigentes de cada producto de Operantio.
+  </Card>
+  <Card title="Consumo detallado y cuotas" icon="chart-line" href="/products/billing/usage-and-quotas">
+    Monitoree su consumo en tiempo real y gestione las cuotas de uso.
+  </Card>
+</Columns>

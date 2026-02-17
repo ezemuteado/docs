@@ -1,0 +1,225 @@
+---
+title: "¿Qué es Dialecto?"
+description: "Análisis en vivo de discursos políticos con transcripción automática, fact-checking, análisis de sentimiento y monitoreo de reacciones en medios."
+icon: "microphone"
+---
+
+## ¿Qué es Dialecto?
+
+Dialecto es una plataforma de análisis en tiempo real impulsada por inteligencia artificial, diseñada para procesar discursos políticos y de gobierno. A partir de una transmisión en vivo o un video grabado, Dialecto genera un análisis integral que incluye transcripción automática, verificación de hechos, análisis de sentimiento, reacciones de medios y seguimiento del impacto en redes sociales.
+
+<Note>
+  Dialecto se encuentra actualmente **activo** y disponible en su consola de
+  Operantio.
+</Note>
+
+---
+
+## Funcionalidades principales
+
+<Columns cols={2}>
+  <Card title="Transcripción en vivo" icon="closed-captioning">
+    Transcripción automática en tiempo real utilizando inteligencia artificial.
+    Cada segmento incluye marcas de tiempo e identificación del orador.
+  </Card>
+  <Card title="Verificación de hechos" icon="check-double">
+    Verificación automatizada de afirmaciones contra fuentes confiables. Cada
+    afirmación recibe un veredicto con su respectiva justificación y fuentes.
+  </Card>
+  <Card title="Análisis de sentimiento" icon="face-smile">
+    Evaluación del tono del discurso en cinco categorías: positivo, negativo,
+    neutro, agresivo y conciliador. Visualización en línea de tiempo.
+  </Card>
+  <Card title="Monitoreo de medios" icon="newspaper">
+    Seguimiento de reacciones de medios de comunicación y redes sociales en
+    tiempo real durante y después del discurso.
+  </Card>
+  <Card title="Análisis de entidades" icon="diagram-project">
+    Identificación y mapeo de relaciones entre personas, organizaciones, lugares
+    y conceptos mencionados en el discurso.
+  </Card>
+  <Card title="Generación de clips" icon="scissors">
+    Cree clips de video compartibles a partir de momentos específicos del
+    discurso, con opciones de relación de aspecto (16:9 y 9:16).
+  </Card>
+</Columns>
+
+---
+
+## ¿Cómo funciona?
+
+Dialecto procesa cada discurso a través de un pipeline de análisis en múltiples etapas:
+
+<Steps>
+  <Step title="Ingesta del discurso">
+    Usted puede agregar un discurso desde tres fuentes:
+    - **URL de YouTube**: Pegue el enlace de un video de YouTube (en vivo o grabado).
+    - **Subida de archivo**: Cargue un archivo de video directamente desde su dispositivo.
+    - **Transmisión en vivo**: Conecte una transmisión en vivo para análisis en tiempo real.
+
+    Además, debe asignar un **título** y un **orador** al discurso.
+
+  </Step>
+  <Step title="Procesamiento de video">
+    El sistema descarga el video, genera una miniatura, convierte el audio al formato óptimo para transcripción y lo prepara para streaming HLS.
+  </Step>
+  <Step title="Transcripción automática">
+    El audio se transcribe utilizando inteligencia artificial con marcas de tiempo precisas e identificación de segmentos por orador.
+  </Step>
+  <Step title="Análisis paralelo">
+    Una vez completada la transcripción, se ejecutan **12 tipos de análisis en paralelo**:
+    - Sentimiento general y por segmento
+    - Estructura del discurso (secciones y duración)
+    - Frases clave con marcas de tiempo
+    - Entidades y relaciones
+    - Frecuencia de palabras y frases repetidas
+    - Verificación de hechos (fact-check)
+    - Reacciones de medios de comunicación
+    - Reacciones en redes sociales
+    - Análisis técnico (claridad, complejidad, retórica)
+    - Análisis visual y de contexto
+  </Step>
+  <Step title="Resultados disponibles">
+    Todos los resultados se presentan en una interfaz organizada por pestañas, donde usted puede explorar cada dimensión del análisis.
+  </Step>
+</Steps>
+
+---
+
+## Pestañas de análisis
+
+Cuando usted accede al detalle de un discurso, encontrará las siguientes pestañas de análisis:
+
+<AccordionGroup>
+  <Accordion title="Resumen general" icon="chart-pie">
+    Vista consolidada con el resumen generado por IA, las métricas principales del discurso y los puntos más relevantes. Incluye un resumen ejecutivo que sintetiza el contenido y tono del discurso.
+  </Accordion>
+
+<Accordion title="Sentimiento" icon="face-smile">
+  Desglose del sentimiento a lo largo del discurso con visualización en línea de
+  tiempo. Las categorías evaluadas son: - **Positivo**: Declaraciones optimistas
+  o constructivas - **Negativo**: Declaraciones críticas o pesimistas -
+  **Neutro**: Declaraciones informativas sin carga emocional - **Agresivo**:
+  Declaraciones confrontativas o de ataque - **Conciliador**: Declaraciones de
+  acuerdo o búsqueda de consenso
+</Accordion>
+
+<Accordion title="Estructura" icon="list-tree">
+  Descomposición del discurso en secciones temáticas con duración de cada
+  bloque. Le permite entender cómo el orador organizó su mensaje y cuánto tiempo
+  dedicó a cada tema.
+</Accordion>
+
+<Accordion title="Frases clave" icon="quote-left">
+  Extracción de las declaraciones más relevantes del discurso con sus
+  respectivas marcas de tiempo. Usted puede hacer clic en una frase para navegar
+  directamente a ese momento en el video.
+</Accordion>
+
+<Accordion title="Fact-check" icon="check-double">
+  Verificación automatizada de afirmaciones realizadas durante el discurso. Cada
+  afirmación verificada incluye: - La cita textual del orador - El veredicto
+  (verdadero, falso, parcialmente verdadero, sin verificar) - La justificación
+  detallada - Las fuentes utilizadas para la verificación
+</Accordion>
+
+<Accordion title="Relaciones y entidades" icon="diagram-project">
+  Mapa visual de todas las personas, organizaciones, lugares y conceptos
+  mencionados en el discurso, junto con las relaciones entre ellos. Útil para
+  entender las redes de influencia y las referencias del orador.
+</Accordion>
+
+<Accordion title="Palabras y frecuencia" icon="font">
+  Análisis de las palabras más utilizadas y las frases repetidas a lo largo del
+  discurso. Le permite identificar los mensajes centrales y el vocabulario
+  predominante.
+</Accordion>
+
+<Accordion title="Análisis técnico" icon="gauge-high">
+  Métricas técnicas del discurso que incluyen: - **Claridad**: Qué tan
+  comprensible es el lenguaje utilizado - **Complejidad**: Nivel de
+  sofisticación del vocabulario y las oraciones - **Retórica**: Uso de figuras
+  retóricas y técnicas persuasivas - **Nivel de lectura**: Puntaje Flesch de
+  legibilidad
+</Accordion>
+
+<Accordion title="Reacciones de medios" icon="tv">
+  Seguimiento de cómo los principales medios de comunicación reaccionaron al
+  discurso. Este análisis se ejecuta de forma asincrónica y puede requerir unos
+  minutos adicionales tras completarse el análisis principal.
+</Accordion>
+
+  <Accordion title="Reacciones en redes sociales" icon="hashtag">
+    Monitoreo de la conversación en redes sociales (X/Twitter) generada a partir del discurso. Incluye volumen de menciones, sentimiento predominante y las publicaciones más relevantes.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Funcionalidades adicionales
+
+### Asistente de IA
+
+Usted puede realizar preguntas en lenguaje natural sobre el contenido de cualquier discurso. El asistente de IA le responderá basándose exclusivamente en la transcripción y el análisis del discurso seleccionado.
+
+El sistema también sugiere preguntas relevantes que usted puede utilizar como punto de partida.
+
+### Comparación de discursos
+
+Dialecto le permite comparar entre 2 y 3 discursos de forma simultánea. La comparación genera un análisis lado a lado que incluye diferencias de tono, temáticas abordadas, sentimiento y estilo retórico. Usted también puede exportar el reporte comparativo.
+
+### Generación de clips
+
+Desde cualquier discurso, usted puede crear clips de video seleccionando un rango de tiempo específico. Los clips están disponibles en dos formatos:
+
+- **16:9** (horizontal): Ideal para medios tradicionales y presentaciones
+- **9:16** (vertical): Optimizado para redes sociales (Instagram Stories, TikTok, Reels)
+
+### Exportación
+
+Usted puede exportar el análisis completo de un discurso en los siguientes formatos:
+
+- **PDF**: Reporte ejecutivo listo para compartir
+
+### Gestión de oradores
+
+Dialecto mantiene un registro de oradores. Usted puede:
+
+- Buscar oradores existentes por nombre
+- Crear nuevos perfiles de orador
+- Consultar estadísticas agregadas por orador (cantidad de discursos, sentimiento promedio, etc.)
+
+---
+
+## Gestión de discursos
+
+Desde la barra lateral, usted puede administrar todos sus discursos:
+
+| Acción               | Descripción                                                                                     |
+| -------------------- | ----------------------------------------------------------------------------------------------- |
+| **Agregar discurso** | Inicie el asistente para agregar un nuevo discurso desde YouTube, archivo o transmisión en vivo |
+| **Editar**           | Modifique el título o el orador asignado al discurso                                            |
+| **Archivar**         | Mueva el discurso al archivo sin eliminarlo                                                     |
+| **Restaurar**        | Recupere un discurso archivado                                                                  |
+| **Eliminar**         | Elimine permanentemente un discurso y todo su análisis                                          |
+
+---
+
+## Primeros pasos
+
+<Steps>
+  <Step title="Acceda a Dialecto">
+    Inicie sesión en su [consola de Operantio](https://app.operantio.com) y
+    seleccione **Dialecto** desde la página de inicio o desde la barra de navegación superior.
+  </Step>
+  <Step title="Agregue su primer discurso">
+    Haga clic en **"Agregar discurso"** y siga el asistente: 1. Seleccione la
+    fuente (YouTube, archivo o transmisión en vivo) 2. Asigne un título
+    descriptivo 3. Seleccione o cree el orador 4. Confirme para iniciar el
+    procesamiento
+  </Step>
+  <Step title="Explore el análisis">
+    Una vez completado el procesamiento, explore cada pestaña de análisis para
+    obtener una comprensión integral del discurso.
+  </Step>
+</Steps>

@@ -1,0 +1,240 @@
+---
+title: "Consumo detallado y cuotas"
+description: "Aprenda a monitorear su consumo en tiempo real, interpretar el desglose por servicio y gestionar las cuotas de uso de cada producto."
+icon: "chart-line"
+---
+
+## Panel de consumo
+
+Desde la sección **"Facturación"** de su consola, usted puede consultar en tiempo real el consumo acumulado del período en curso. El panel le ofrece una visión completa de cómo se distribuyen los costos en su organización.
+
+<Frame>
+  <img
+    src="/images/billing/billing-overview.png"
+    alt="Panel principal de facturación con costo total del período"
+  />
+</Frame>
+
+### Costo total del período
+
+En la parte superior del panel, encontrará una tarjeta con:
+
+- **Monto acumulado** del mes en curso (en USD)
+- **Comparación** con el mes anterior (porcentaje de variación con indicador de tendencia)
+- **Costo del mes anterior** como referencia
+
+<Frame>
+  <img
+    src="/images/billing/overview-card.png"
+    alt="Tarjeta de costo total con comparación mensual"
+  />
+</Frame>
+
+<Tip>
+  Si el indicador de tendencia muestra un aumento significativo respecto al mes
+  anterior, revise el desglose por servicio para identificar qué producto está
+  generando el incremento.
+</Tip>
+
+---
+
+## Evolución mensual
+
+El gráfico de evolución le permite visualizar cómo han variado sus costos a lo largo de los últimos meses.
+
+<Frame>
+  <img
+    src="/images/billing/evolution-chart.png"
+    alt="Gráfico de evolución de costos mensuales"
+  />
+</Frame>
+
+Cada barra del gráfico representa el costo total de un mes, con los meses etiquetados en formato abreviado (Ene, Feb, Mar, etc.). Usted puede identificar rápidamente tendencias de crecimiento o reducción en su consumo.
+
+---
+
+## Desglose por servicio
+
+La sección de desglose le muestra en detalle cómo se distribuyen los costos entre los productos que tiene activos.
+
+<Frame>
+  <img
+    src="/images/billing/product-breakdown.png"
+    alt="Desglose de costos por servicio con conceptos individuales"
+  />
+</Frame>
+
+### ¿Qué información incluye?
+
+Para cada producto activo, usted verá:
+
+| Elemento                  | Descripción                                               |
+| ------------------------- | --------------------------------------------------------- |
+| **Nombre del servicio**   | El producto de Operantio (Dialecto, Situation Room, etc.) |
+| **Cantidad de conceptos** | Número de líneas de consumo dentro del producto           |
+| **Porcentaje del total**  | Qué proporción del costo total representa este servicio   |
+| **Costo del servicio**    | Monto total acumulado en USD                              |
+
+### Detalle por concepto
+
+Al expandir un servicio, usted puede ver cada concepto individual:
+
+<Frame>
+  <img
+    src="/images/billing/line-items.png"
+    alt="Conceptos individuales de un servicio con cantidad, precio unitario y total"
+  />
+</Frame>
+
+| Columna             | Descripción                                                                      |
+| ------------------- | -------------------------------------------------------------------------------- |
+| **Concepto**        | Nombre del recurso consumido (ej: "Análisis de discurso", "Generación de clips") |
+| **Cantidad**        | Número de unidades consumidas con su etiqueta (ej: "12 discursos", "5 clips")    |
+| **Precio unitario** | Costo por unidad, o **"Incluido"** si el concepto no tiene cargo adicional       |
+| **Total**           | Costo acumulado para ese concepto en el período                                  |
+
+---
+
+## Selector de período
+
+Usted puede consultar el consumo de cualquier período anterior utilizando el selector de período ubicado en la parte superior del panel.
+
+<Frame>
+  <img
+    src="/images/billing/period-selector.png"
+    alt="Selector de período con calendario mensual"
+  />
+</Frame>
+
+Al seleccionar un mes diferente, todo el panel se actualiza para mostrar:
+
+- El costo total de ese período
+- El desglose por servicio correspondiente
+- La comparación con el mes inmediatamente anterior
+
+<Note>
+  El período mostrado se indica como **"Período seleccionado: [Mes] [Año]"**
+  debajo del título de la sección.
+</Note>
+
+---
+
+## Gráfico de distribución de costos
+
+Además del desglose tabular, el panel incluye un gráfico apilado que muestra visualmente cómo se distribuyen los costos entre los diferentes productos.
+
+<Frame>
+  <img
+    src="/images/billing/cost-breakdown-chart.png"
+    alt="Gráfico apilado de distribución de costos por producto"
+  />
+</Frame>
+
+Cada color del gráfico representa un producto diferente, lo que le permite identificar de un vistazo cuál es el servicio que más aporta a su factura mensual.
+
+---
+
+## Cuotas de uso
+
+Algunos productos y conceptos incluyen **cuotas** que definen los límites de uso dentro de su plan. Las cuotas le permiten entender cuánto del recurso incluido ya fue consumido y cuánto queda disponible antes de que se generen cargos adicionales por excedente.
+
+### Tipos de cuotas
+
+<Columns cols={2}>
+  <Card title="Cuota incluida" icon="gift">
+    Cantidad de uso incluida sin costo adicional dentro del producto. Por
+    ejemplo: los primeros 500 documentos/mes en Análisis de Narrativa.
+  </Card>
+  <Card title="Límite de concurrencia" icon="gauge-high">
+    Cantidad máxima de recursos que pueden estar activos simultáneamente. Por
+    ejemplo: hasta 50 clusters temáticos activos a la vez.
+  </Card>
+  <Card title="Cuota de retención" icon="clock">
+    Período durante el cual los datos se almacenan antes de ser purgados. Por
+    ejemplo: logs de acceso con retención de 90 días.
+  </Card>
+  <Card title="Cuota por excedente" icon="arrow-up-right-dots">
+    Cuando usted supera la cuota incluida, se cobra una tarifa por cada unidad
+    adicional consumida.
+  </Card>
+</Columns>
+
+---
+
+## Exportar datos de consumo
+
+Usted puede exportar el desglose completo de consumo del período seleccionado en formato **CSV** para procesarlo en hojas de cálculo o sistemas internos.
+
+<Frame>
+  <img
+    src="/images/billing/export-csv.png"
+    alt="Botón de exportación CSV del desglose de consumo"
+  />
+</Frame>
+
+El archivo CSV incluye las siguientes columnas:
+
+| Columna             | Descripción                                           |
+| ------------------- | ----------------------------------------------------- |
+| **Producto**        | Nombre del servicio                                   |
+| **Concepto**        | Recurso consumido                                     |
+| **Cantidad**        | Unidades consumidas                                   |
+| **Unidad**          | Etiqueta de la unidad (discursos, clips, horas, etc.) |
+| **Precio unitario** | Costo por unidad en USD                               |
+| **Total**           | Costo total del concepto en USD                       |
+
+Para exportar, haga clic en **"Exportar CSV"** en la parte superior del panel de facturación.
+
+---
+
+## Alertas y notificaciones
+
+### Banner de facturas vencidas
+
+Si su organización tiene facturas pendientes de pago, verá un banner de advertencia en la parte superior de la consola indicando:
+
+- El **monto adeudado**
+- Los **días restantes** antes de una posible suspensión
+- Un enlace directo a la sección de **facturación**
+
+El banner cambia de color según la urgencia:
+
+| Urgencia     | Color    | Condición                                     |
+| ------------ | -------- | --------------------------------------------- |
+| **Moderada** | Amarillo | Más de 3 días restantes del período de gracia |
+| **Alta**     | Rojo     | 3 días o menos antes de la suspensión         |
+
+<Warning>
+  El período de gracia es de **15 días** desde la fecha de vencimiento de la
+  factura. Transcurrido este plazo, su organización podrá ser suspendida hasta
+  que se regularice el pago.
+</Warning>
+
+### Desactivación programada
+
+Si usted programó la desactivación de un servicio, verá un badge de **"Desactivación programada"** junto al producto en el desglose. Esto le confirma que:
+
+- El servicio continuará activo hasta el **final del período actual**
+- No se generarán cargos en el **siguiente período**
+- Usted puede **cancelar la desactivación** en cualquier momento antes del cierre del período
+
+<Frame>
+  <img
+    src="/images/billing/deactivation-badge.png"
+    alt="Badge de desactivación programada junto a un servicio"
+  />
+</Frame>
+
+---
+
+## Volver a facturación
+
+<Card
+  title="Facturación y precios"
+  icon="credit-card"
+  href="/products/billing"
+  horizontal
+>
+  Consulte la documentación general de facturación, precios, métodos de pago y
+  seguridad.
+</Card>
