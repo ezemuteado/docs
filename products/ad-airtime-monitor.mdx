@@ -1,0 +1,182 @@
+---
+title: "Ad Airtime Monitor"
+description: "Verificación automática de emisiones publicitarias en TV y radio con reportes de cumplimiento contractual en tiempo real."
+icon: "tower-broadcast"
+---
+
+## ¿Qué es Ad Airtime Monitor?
+
+Ad Airtime Monitor es un servicio de auditoría publicitaria que detecta automáticamente cuándo y dónde se emiten sus spots en canales de TV y emisoras de radio. El sistema compara las emisiones detectadas contra lo contratado y genera reportes de cumplimiento con porcentajes de fulfillment, detecciones por canal y exportación a PDF.
+
+<Note>
+  Ad Airtime Monitor se encuentra actualmente **activo** y disponible en su consola
+  de Operantio.
+</Note>
+
+---
+
+## ¿Cómo funciona?
+
+<Steps>
+  <Step title="Registre sus anuncios">
+    Suba el audio de sus spots publicitarios a la plataforma. Ad Airtime Monitor
+    genera una huella digital acústica (fingerprint) única para cada anuncio, que
+    permite identificarlo sin importar variaciones de volumen, codificación o
+    compresión.
+  </Step>
+  <Step title="Configure sus proveedores">
+    Agregue los canales de TV y emisoras de radio que desea monitorear. El sistema
+    se conecta a los streams en vivo y comienza a capturar audio en tiempo real.
+  </Step>
+  <Step title="Monitoreo continuo 24/7">
+    El motor de detección analiza el audio en chunks de 15 segundos, comparando cada
+    fragmento contra todos los fingerprints registrados. Las detecciones se registran
+    con timestamp, canal, score de confianza y franja horaria.
+  </Step>
+  <Step title="Revise el cumplimiento">
+    Acceda al dashboard para visualizar el estado de cumplimiento contractual de cada
+    anuncio: cantidad de emisiones contratadas vs. detectadas, porcentaje de fulfillment
+    y distribución por franja horaria.
+  </Step>
+</Steps>
+
+---
+
+## Funcionalidades
+
+<Columns cols={2}>
+  <Card title="Fingerprinting de audio" icon="fingerprint">
+    Identificación de spots mediante huella digital acústica basada en Chromaprint.
+    Funciona con cualquier codificación, volumen o calidad de transmisión.
+  </Card>
+  <Card title="Monitoreo multi-stream" icon="tower-broadcast">
+    Captura simultánea de múltiples canales de TV y emisoras de radio. Cada stream
+    se procesa de forma independiente con reconexión automática ante cortes.
+  </Card>
+  <Card title="Dashboard en tiempo real" icon="chart-mixed">
+    Panel con KPIs de detecciones del día, del mes, anuncios activos, proveedores
+    monitoreados y cumplimiento contractual por anuncio.
+  </Card>
+  <Card title="Cumplimiento contractual" icon="clipboard-check">
+    Porcentaje de fulfillment por anuncio con estados: COMPLIANT, IN PROGRESS,
+    BELOW TARGET. Compara emisiones detectadas vs. contratadas.
+  </Card>
+  <Card title="Grilla de emisiones" icon="table-cells-large">
+    Visualización diaria de todas las detecciones organizadas por canal y franja
+    horaria (matutina, mediodía, prime time, trasnoche).
+  </Card>
+  <Card title="Exportación a PDF" icon="file-pdf">
+    Generación de reportes formales de cumplimiento con tabla de compliance, detecciones
+    por proveedor y métricas consolidadas. Descarga vía URL firmada con validez de 3 días.
+  </Card>
+</Columns>
+
+---
+
+## Franjas horarias
+
+Las detecciones se clasifican automáticamente en las siguientes franjas:
+
+| Franja | Horario | Descripción |
+|--------|---------|-------------|
+| **Matutina** | 06:00 – 12:00 | Programación de la mañana |
+| **Mediodía** | 12:00 – 18:00 | Programación de la tarde |
+| **Prime Time** | 18:00 – 01:00 | Horario de máxima audiencia |
+| **Trasnoche** | 01:00 – 06:00 | Programación nocturna |
+
+<Info>
+  Todos los horarios se expresan en la zona horaria local del proveedor de stream configurado.
+</Info>
+
+---
+
+## Reportes PDF
+
+Ad Airtime Monitor permite generar reportes formales de cumplimiento contractual en formato PDF. El documento incluye:
+
+- **Sección de resumen**: KPIs generales del período (total de anuncios, detecciones, streams monitoreados)
+- **Tabla de compliance**: Estado de cumplimiento por anuncio con porcentaje de fulfillment y categorización por colores
+- **Detecciones por proveedor**: Tablas detalladas con fecha/hora, nombre del anuncio, cliente y score de confianza
+
+Los reportes se generan bajo demanda y se almacenan temporalmente en S3 con una URL firmada válida por **3 días**. Pasado ese plazo, el archivo se elimina automáticamente.
+
+---
+
+## Integraciones
+
+<Columns cols={3}>
+  <Card title="REST API" icon="code">
+    API completa para gestionar anuncios, streams, detecciones y reportes de forma
+    programática.
+  </Card>
+  <Card title="Webhooks" icon="webhook">
+    Notificaciones en tiempo real ante cada detección de un anuncio en un stream
+    monitoreado.
+  </Card>
+  <Card title="Exportación PDF" icon="file-export">
+    Endpoint dedicado para generar y descargar reportes de cumplimiento en formato
+    PDF.
+  </Card>
+</Columns>
+
+---
+
+## Casos de uso
+
+<AccordionGroup>
+  <Accordion title="Agencias de publicidad" icon="bullhorn">
+    Verificación independiente de que los spots contratados fueron efectivamente
+    emitidos en los horarios y canales pactados con los proveedores de medios.
+  </Accordion>
+
+  <Accordion title="Anunciantes directos" icon="building">
+    Control de cumplimiento contractual de campañas publicitarias en TV abierta,
+    cable y radio. Evidencia objetiva para negociaciones con proveedores.
+  </Accordion>
+
+  <Accordion title="Organismos reguladores" icon="scale-balanced">
+    Auditoría de pauta oficial y verificación de emisión de contenido obligatorio
+    en medios regulados. Reportes formales para procesos de control.
+  </Accordion>
+
+  <Accordion title="Centrales de medios" icon="chart-pie">
+    Monitoreo consolidado de múltiples campañas y clientes en una sola plataforma.
+    Reportes automatizados de cumplimiento por cliente y período.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Precios
+
+| Concepto | Modelo | Precio | Detalle |
+|----------|--------|--------|---------|
+| Ad Airtime Monitor License | Tarifa plana | USD $3,500/mes | Licencia mensual del producto |
+
+<Card title="Ver tabla de precios completa" icon="tag" href="/products/billing/pricing" horizontal>
+  Consulte los precios de todos los productos de Operantio.
+</Card>
+
+---
+
+## Primeros pasos
+
+<Steps>
+  <Step title="Acceda a Ad Airtime Monitor">
+    Inicie sesión en su [consola de Operantio](https://app.operantio.com) y
+    seleccione **Ad Airtime Monitor** desde la página de inicio o desde la barra
+    de navegación superior.
+  </Step>
+  <Step title="Registre sus anuncios">
+    Vaya a **Mis Anuncios** y suba el audio de cada spot publicitario que desea
+    monitorear. El sistema generará automáticamente la huella digital.
+  </Step>
+  <Step title="Configure proveedores">
+    En la sección **Proveedores**, agregue los canales de TV y emisoras de radio
+    con su URL de stream. El monitoreo comienza inmediatamente.
+  </Step>
+  <Step title="Revise el dashboard">
+    Acceda al **Dashboard** para ver las detecciones en tiempo real, el estado de
+    cumplimiento contractual y la distribución por franja horaria.
+  </Step>
+</Steps>
