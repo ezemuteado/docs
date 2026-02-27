@@ -20,18 +20,18 @@ Ad Airtime Monitor es un servicio de auditoría publicitaria que detecta automá
 <Steps>
   <Step title="Registre sus anuncios">
     Suba el audio de sus spots publicitarios a la plataforma. Ad Airtime Monitor
-    genera una huella digital acústica (fingerprint) única para cada anuncio, que
-    permite identificarlo sin importar variaciones de volumen, codificación o
-    compresión.
+    genera una huella digital acústica única para cada anuncio mediante tecnología
+    de fingerprinting con IA, que permite identificarlo sin importar variaciones
+    de volumen, codificación o compresión.
   </Step>
   <Step title="Configure sus proveedores">
     Agregue los canales de TV y emisoras de radio que desea monitorear. El sistema
     se conecta a los streams en vivo y comienza a capturar audio en tiempo real.
   </Step>
   <Step title="Monitoreo continuo 24/7">
-    El motor de detección analiza el audio en chunks de 15 segundos, comparando cada
-    fragmento contra todos los fingerprints registrados. Las detecciones se registran
-    con timestamp, canal, score de confianza y franja horaria.
+    El motor de detección analiza el audio de forma continua, comparando cada
+    fragmento contra todos los anuncios registrados. Las detecciones se registran
+    con fecha y hora, canal, nivel de confianza y franja horaria.
   </Step>
   <Step title="Revise el cumplimiento">
     Acceda al dashboard para visualizar el estado de cumplimiento contractual de cada
@@ -45,12 +45,12 @@ Ad Airtime Monitor es un servicio de auditoría publicitaria que detecta automá
 ## Funcionalidades
 
 <Columns cols={2}>
-  <Card title="Fingerprinting de audio" icon="fingerprint">
-    Identificación de spots mediante huella digital acústica basada en Chromaprint.
-    Funciona con cualquier codificación, volumen o calidad de transmisión.
+  <Card title="Fingerprinting con IA" icon="fingerprint">
+    Identificación de spots mediante tecnología propietaria de huella digital
+    acústica con IA. Funciona con cualquier codificación, volumen o calidad de transmisión.
   </Card>
-  <Card title="Monitoreo multi-stream" icon="tower-broadcast">
-    Captura simultánea de múltiples canales de TV y emisoras de radio. Cada stream
+  <Card title="Monitoreo multi-canal" icon="tower-broadcast">
+    Captura simultánea de múltiples canales de TV y emisoras de radio. Cada señal
     se procesa de forma independiente con reconexión automática ante cortes.
   </Card>
   <Card title="Dashboard en tiempo real" icon="chart-mixed">
@@ -96,21 +96,21 @@ Ad Airtime Monitor permite generar reportes formales de cumplimiento contractual
 
 - **Sección de resumen**: KPIs generales del período (total de anuncios, detecciones, streams monitoreados)
 - **Tabla de compliance**: Estado de cumplimiento por anuncio con porcentaje de fulfillment y categorización por colores
-- **Detecciones por proveedor**: Tablas detalladas con fecha/hora, nombre del anuncio, cliente y score de confianza
+- **Detecciones por proveedor**: Tablas detalladas con fecha/hora, nombre del anuncio, cliente y nivel de confianza
 
-Los reportes se generan bajo demanda y se almacenan temporalmente en S3 con una URL firmada válida por **3 días**. Pasado ese plazo, el archivo se elimina automáticamente.
+Los reportes se generan bajo demanda y se almacenan temporalmente con una URL de descarga válida por **3 días**. Pasado ese plazo, el archivo se elimina automáticamente.
 
 ---
 
 ## Integraciones
 
 <Columns cols={3}>
-  <Card title="REST API" icon="code">
-    API completa para gestionar anuncios, streams, detecciones y reportes de forma
+  <Card title="API" icon="code">
+    API completa para gestionar anuncios, canales, detecciones y reportes de forma
     programática.
   </Card>
   <Card title="Webhooks" icon="webhook">
-    Notificaciones en tiempo real ante cada detección de un anuncio en un stream
+    Notificaciones en tiempo real ante cada detección de un anuncio en un canal
     monitoreado.
   </Card>
   <Card title="Exportación PDF" icon="file-export">
@@ -173,7 +173,7 @@ Los reportes se generan bajo demanda y se almacenan temporalmente en S3 con una 
   </Step>
   <Step title="Configure proveedores">
     En la sección **Proveedores**, agregue los canales de TV y emisoras de radio
-    con su URL de stream. El monitoreo comienza inmediatamente.
+    con su señal de transmisión. El monitoreo comienza inmediatamente.
   </Step>
   <Step title="Revise el dashboard">
     Acceda al **Dashboard** para ver las detecciones en tiempo real, el estado de
